@@ -1,0 +1,17 @@
+netstat -abn|findstr "8080"		查询指定端口占用程序的pid
+tasklist|findstr "180"			查看pid 为 180的进程的程序名称
+taskkill? /f? /t ?/im? javaw.exe	强制结束占用8080端口的程序javaw.exe
+
+12种网页设计常用的颜色
+1. 浅绿 #8cc540
+2. 深绿 #009f5d
+3. 暗蓝 #019fa0
+4. 蓝色 #019fde
+5. 深蓝 #007cdc
+6. 深紫 #887ddd
+7. 浅紫 #cd7bdd
+8. 粉色 #ff5675
+9. 红色 #ff1244
+10. 橙色 #ff8345
+11. 黄色 #f8bd0b
+12. 灰色 #d1d2d4
