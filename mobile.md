@@ -58,6 +58,8 @@ theme: moon
 - css像素：浏览器使用的抽象单位，主要用来在网页上绘制内容
 - 设备像素：显示屏幕的最小物理单位，每个 dp 包含自己的颜色、亮度
 - css 1px != device 1px
+<br>
+<img src="/images/dpr.png" height="314" width="771">
 [/note]
 [slide]
 ## 计算html的font-size大小
@@ -83,10 +85,9 @@ html的font-size值(单位是rem) = 屏幕宽度 * dpr / 基数
 [slide]
 
 - 明白viewport的概念
-	* **layout viewport**
+	* **layout viewport**浏览器默认输出
 	* **visual viewport**可以理解为设备自己的宽度
 	* **ideal viewport**一个完美适配移动设备的 viewport
-	* **meta viewport**
 - 弄清跟viewport有关的meta标签的使用
 
 [slide]
@@ -157,33 +158,31 @@ html的font-size值(单位是rem) = 屏幕宽度 * dpr / 基数
 [slide]
 ## 移动端click延迟和点透的问题
 ---
-[note]
-## 小测试
-- iOS
-	- touchstart:0
-	- touchend:204
-	- mouseover:243
-	- mousemove:243
-- Android
-	- mouseover:0
-	- mousemove:6
-	- touchstart:12
-	- touchend:568
-	- mousedown:869
-	- mouseup:874
-	- click:876
 
+<img src="/images/click.png" height="397" width="632">
+* 原因
+* 不用click用touch
+* zepto.js的tap事件
+
+[slide]
+[note]
+zepto的代码里面有个settimeout，在settimeout里面执行e.preventDefault()不会生效
 [/note]
-- 解决click延迟问题
-	* width=device-width Meta 标签
-	* 专业：FastClick库（10KB），检测到touchend事件的时候，会通过 DOM自定义事件立即触发一个模拟click事件，并把浏览器在 300毫秒之后真正触发的click事件阻止掉。
-	* tap.js：监听tap事件，不使用click
-	* zepto.js的tap事件
 
 - 使用zepto出现的点透问题（特定场景）
 > 在重叠的区域里，被遮盖的元素绑定click，遮盖的元素绑定touch事件，且touch后遮盖的元素会隐藏的话，就会造成穿透，因为click是在touch之后延迟触发的，浏览器会误认为是在遮盖的元素上触发了click。
 [slide]
-## 微信分享
+# 方案
+---
+
+- 用touchend代替tap事件并阻止掉touchend的默认行为preventDefault()
+- 延迟一定的时间(300ms+)来处理事件
+- tap.js：监听tap事件，不使用click
+- FastClick库（10KB），检测到touchend事件的时候，会通过 DOM自定义事件立即触发一个模拟click事件，并把浏览器在 300毫秒之后真正触发的click事件阻止掉。
+
+
+[slide]
+## 微信分享 
 ---
 
 - 确保引入js-sdk
@@ -197,7 +196,7 @@ html的font-size值(单位是rem) = 屏幕宽度 * dpr / 基数
 
 - 生成页面二维码
 - fiddler抓包
-- 模拟器
+- <a href="http://www.csdn.net/article/2014-04-11/2819260-10-most-useful-mobile-app-testing-tools">模拟器</a>
 - 使用 Weinre 调试
 - browser-sync
 [slide]

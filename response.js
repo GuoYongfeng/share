@@ -15,7 +15,7 @@
         scale = 1 / dpr;
         content = 'width=' + clientWidth * dpr + ',initial-scale=' + scale + ',maximum-scale=' + scale +
                     ', minimum-scale=' + scale;
-      
+        // 使用css hack的方式去写不同dpr下的font-size
         metaEl.setAttribute('content', content);
     }
 
