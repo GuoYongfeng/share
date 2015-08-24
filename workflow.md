@@ -93,9 +93,8 @@ theme: moon
 
 - 服务端使用JAVA，提供接口数据服务，专注业务逻辑，数据稳定
 - 前端负责Node端和浏览器端，专注U展现、用户交互及体验。
-
+[slide]
+# THANKS
 [slide]
 
-[slide]
-THANKS
 
