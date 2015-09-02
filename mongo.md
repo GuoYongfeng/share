@@ -11,7 +11,7 @@
 
 * 启动进程
 	* cd D:\MongoDB\bin
-	* mongod -dbpath “D:\MongoDB\data\db”
+	* mongod -dbpath "D:\MongoDB\data\db"
 * 测试是否正常启动
 	* 开一个cmd窗口
 	* cd D:\MongoDB\bin
