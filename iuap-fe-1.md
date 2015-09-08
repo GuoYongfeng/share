@@ -2,7 +2,6 @@ title: 前端技术交流
 speaker: 郭永峰
 url: 
 transition: move
-files: /js/demo.js,/css/demo.css,/js/zoom.js
 theme: moon
 
 [slide style="background-image:url('/img/bg1.png')"]
@@ -27,9 +26,13 @@ theme: moon
 # 前端知识点
 ---
 
+[查看详细内容](https://github.com/iUAP-FE/feclub/blob/master/fe-knowledge.md)
+
 [slide]
 # node环境配置、github、git
 ---
+
+[查看详细内容](https://github.com/iUAP-FE/feclub/blob/master/conf.md)
 
 [slide]
 # Jello
@@ -37,8 +40,8 @@ theme: moon
 
 - 针对服务端为JAVA + Velocity/jsp的前端集成解决方案
 - 提供前后端开发分离、自动性能优化、模块化开发机制等功能。
+- [查看详细内容](https://github.com/iUAP-FE/feclub/blob/master/jello.md)
 
-[slide]
 
 [slide]
 
