@@ -6,7 +6,7 @@ theme: moon
 
 [slide style="background-image:url('/img/bg1.png')"]
 # iUAP前端技术小组
-## 前端技术交流
+## 前端技术沙龙
 <small>分享人：**郭永峰**</small>
 
 [slide]
@@ -251,7 +251,9 @@ theme: moon
 # 前端开发环境
 ---
 
-- node环境配置 {:&.zoomIn}
+- Sublime text 3 || Webstorm {:&.zoomIn}
+- Chrome
+- node环境
 - 使用git的姿势
 - github
 - [查看详细内容](https://github.com/iUAP-FE/feclub/blob/master/conf.md)
@@ -296,9 +298,13 @@ theme: moon
 ## React + reflux打造单向数据流示例
 ---
 
-- react {:&.zoomIn}
-- reflux
-- gulp
+- gulp构建工具：支持文件监听、实时解析、文件合并、自动刷新、模块打包等功能
+- React：具有组件化实现、JSX、Virtual DOM、单向数据流等优势
+- browserify：实现前后端JS代码风格统一，无缝引用npm包代码
+- less：模块化css、快捷书写样式及解析
+- bower前端包管理器：为模块的安装、升级和删除，提供一种统一的、可维护的管理模式
+- reflux：Flux思想的实现，单向数据流，事件机制驱动数据流动
+
 
 [slide]
 # 示例演示
