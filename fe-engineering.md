@@ -283,6 +283,12 @@ FIS3 是面向前端的工程构建工具。解决前端工程中性能优化、
 
 [slide]
 
+## 端上DEMO和大家共享
+
+https://github.com/GuoYongfeng/engineering-share-demo
+
+[slide]
+
 # Q & A
 
 [slide]
